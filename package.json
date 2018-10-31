@@ -1,0 +1,19 @@
+{
+  "name": "lisamariecrafts",
+  "version": "1.0.0",
+  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://winsanpang@bitbucket.org/winsanpang/lisamariecrafts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/winsanpang/lisamariecrafts#readme",
+  "dependencies": {
+    "foundation-sites": "^6.5.0-rc.4"
+  }
+}

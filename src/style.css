@@ -1,0 +1,94 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.5.0-rc.4
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+@import url("https://fonts.googleapis.com/css?family=Edwardian Script ITC:normal|Heebo");
+body {
+  background-color: white;
+}
+
+.navbar {
+  background-color: white;
+  height: 70px;
+}
+
+.logo {
+  width: 130px;
+  height: 65px;
+}
+
+.links {
+  word-spacing: 30px;
+  color: #0054a6;
+  font-family: "Heebo";
+  float: right;
+  padding: 20px;
+}
+
+.navlinks a:hover {
+  color: #0054a6;
+}
+
+.header {
+  height: 300px;
+  width: 100%;
+  font-family: "Edwardian Script ITC";
+  font-weight: normal;
+}
+
+.header h1 {
+  font-size: 80px;
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, 60%);
+          transform: translate(-50%, 60%);
+  color: white;
+}
+
+.header h3 {
+  font-size: 40px;
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translate(-50%, 170%);
+          transform: translate(-50%, 170%);
+  color: #0054a6;
+}
+
+.header-container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.header img {
+  width: 99%;
+  position: absolute;
+  z-index: -1;
+  background: #0054a6;
+}
+
+.section-features-blue {
+  background-color: #0054a6;
+  height: 300px;
+  color: white;
+  text-align: center;
+  font-family: "Heebo";
+}
+
+.section-features-columns {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  padding: 30px;
+}
+
+.whitesection {
+  background-color: white;
+}
+/*# sourceMappingURL=style.css.map */

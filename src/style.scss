@@ -1,0 +1,118 @@
+@import '../node_modules/foundation-sites/scss/foundation.scss';
+@import url('https://fonts.googleapis.com/css?family=Edwardian Script ITC:normal|Heebo');
+
+//Colour scheme//
+$darkblue: #0054a6;
+$white: white;
+$cyan: #59c8f1;
+
+//Text//
+$bodyfont: 'Heebo';
+$headfont: 'Edwardian Script ITC';
+$headsize: 80px;
+$subheadsize: 40px;
+
+//Spacing//
+$smallpadding: 10px;
+$mediumpadding: 20px;
+$largepadding: 30px;
+$nospacing: 0px;
+$navbarspacing: 30px;
+$section: 300px;
+
+body{
+  background-color: $white;
+}
+
+.navbar {
+  background-color:$white;
+  height: 70px;
+}
+
+.logo {
+  width: 130px;
+  height: 65px;
+}
+
+.links {
+  word-spacing: $navbarspacing;
+  color: $darkblue;
+  font-family: $bodyfont;
+  float: right;
+  padding: $mediumpadding;
+}
+
+
+//Not sure if I have to float this to the right//
+
+.navlinks a:hover{
+  color: $darkblue;
+}
+
+.header {
+  height: $section;
+  width: 100%;
+  font-family: $headfont;
+  font-weight: normal;
+}
+
+.header h1 {
+  font-size: $headsize;
+  padding: $largepadding;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, 60%);
+  color: $white;
+  }
+
+.header h3 {
+  font-size: $subheadsize;
+  padding: $largepadding;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 170%);
+  color: $darkblue;
+}
+
+.header-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.header img {
+  width: 99%;
+  position: absolute;
+  z-index: -1;
+  background: $darkblue; //fallback//
+}
+
+.section-features-blue {
+  background-color: $darkblue;
+  height: $section;
+  color: $white;
+  text-align: center;
+  font-family: $bodyfont;
+}
+
+.section-features-columns {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  padding: $largepadding;
+}
+
+
+
+
+
+
+.whitesection {
+  background-color: $white;
+}
+
+
+.bluesection {}
+/*# sourceMappingURL=test.css.map */
