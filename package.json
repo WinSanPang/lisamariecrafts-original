@@ -14,6 +14,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/winsanpang/lisamariecrafts#readme",
   "dependencies": {
-    "foundation-sites": "^6.5.0-rc.4"
+    "foundation-sites": "^6.5.0-rc.4",
+    "node-sass": "^4.9.4"
   }
 }

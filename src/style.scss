@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Edwardian Script ITC|Heebo');
 @import '../node_modules/foundation-sites/scss/foundation.scss';
-@import url('https://fonts.googleapis.com/css?family=Edwardian Script ITC:normal|Heebo');
+@include foundation-everything;
 
 //Colour scheme//
 $darkblue: #0054a6;
@@ -10,19 +11,45 @@ $cyan: #59c8f1;
 $bodyfont: 'Heebo';
 $headfont: 'Edwardian Script ITC';
 $headsize: 80px;
-$subheadsize: 40px;
+$subheadsize: 60px;
+$secheadsize: 45px;
+$secsubheadsize: 25px;
+$bodysize: 13px;
+$shadowdefault: 2px 2px 2px grey;
 
 //Spacing//
 $smallpadding: 10px;
 $mediumpadding: 20px;
 $largepadding: 30px;
+$extralargepadding: 50px;
 $nospacing: 0px;
 $navbarspacing: 30px;
-$section: 300px;
+$banner: 300px;
+$section: 500px;
 
 body{
-  background-color: $white;
+  background-color:$darkblue;
+  width: 100%;
 }
+
+.section-container{
+  width: 100%;
+  max-width: 1300px;
+  margin: 0px auto;
+  padding: $largepadding;
+  height: 100%;
+}
+
+a {
+  color: $white;
+}
+
+a:hover {
+  color: $white;
+  text-shadow: 0.5px 0.5px black;
+}
+
+//maybe not text-shadow, perhaps try a glow effect//
 
 .navbar {
   background-color:$white;
@@ -42,44 +69,49 @@ body{
   padding: $mediumpadding;
 }
 
-
+.links a {
+  color: $darkblue;
+}
 //Not sure if I have to float this to the right//
 
-.navlinks a:hover{
+.links a:hover{
   color: $darkblue;
+  text-shadow: 0.5px 0.5px black;
 }
 
 .header {
-  height: $section;
-  width: 100%;
-  font-family: $headfont;
+  height: $banner;  
   font-weight: normal;
+  background-image: url(../pictures/Heading-banner-v2.png);
+  background-size: cover;
+  resize: both;
 }
 
 .header h1 {
   font-size: $headsize;
-  padding: $largepadding;
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, 60%);
   color: $white;
+  font-family: $headfont;
+  text-align: center;
+  text-shadow: $shadowdefault;
+  margin-bottom: 0;
   }
 
+  
 .header h3 {
   font-size: $subheadsize;
-  padding: $largepadding;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, 170%);
   color: $darkblue;
+  font-family: $headfont;
+  text-shadow: $shadowdefault;
+  text-align: center;
+  line-height: 0;
+  padding-top: $smallpadding;
 }
 
-.header-container {
-    text-align: center;
-    position: relative;
-    width: 100%;
+.header-container { 
+  width: 100%;
+  max-width: 1300px;
+  margin: 0px auto;
+  padding-top: 130px;
 }
 
 .header img {
@@ -95,24 +127,217 @@ body{
   color: $white;
   text-align: center;
   font-family: $bodyfont;
+  padding: $largepadding;
+}
+
+.section-features-blue h1, h4 {
+  font-family: $bodyfont;
+}
+
+.section-features-blue h1 {
+  font-size: $secheadsize;
+  padding: $mediumpadding;
+}
+
+.section-features-blue h4 {
+    font-size: $secsubheadsize;
+    padding: $mediumpadding;
+}
+
+.section-features-blue p {
+  font-size: $bodysize;
 }
 
 .section-features-columns {
   display: inline-block;
   width: 200px;
-  height: 100px;
+  height: 200px;
+  vertical-align: top;
+  padding: $largepadding;
+  margin: 20px;
+}
+
+.section-features-blue i {
+  font-size: $secheadsize;
+}
+
+.section-features-white {
+  padding-bottom: $largepadding;
+  background-color: $white;
+  color: $darkblue;
+  font-family: $bodyfont;
+}
+
+.section-features-white h1 {
+  font-size: $secheadsize;
+  font-family: $bodyfont;
+  padding: $mediumpadding;
+}
+
+.section-features-white p {
+  font-size: $bodysize;
+}
+
+.section-testimonal-columns {
+  display: inline-block;
+  width: 500px;
+}
+
+.featured-testimonials-section {
+  background-color: $white;
+  font-family: $bodyfont;
+  font-size: $bodysize;
+  padding: $largepadding;
+  text-align: center;
+  color: $darkblue;
+
+  .featured-testimonials-container {
+    .orbit-previous {
+      color: $darkblue;
+      left: -1rem;
+    }
+
+    .orbit-next {
+      color: $darkblue;
+      right: -1rem;
+    }
+}
+
+  .testimonial {
+    display: flex;
+    align-items: center;
+    margin: 2rem 1rem;
+  }
+
+  .profile-pic {
+    max-width: 100px;
+    border-radius: 50%;
+  }
+
+  .featured-testimonials-quotation {
+    margin-left: 3rem;
+    margin-bottom: 0rem;
+    padding: 1rem;
+    position: relative;
+    color: $darkblue;
+
+    &::before {
+      content: "“";
+      font-size: 5rem;
+      color: lighten($black, 80%);
+      position: absolute;
+      top: -2.5rem;
+      left: -1.5rem;
+    }
+
+    &::after {
+      content: "”";
+      font-size: 5rem;
+      color: lighten($black, 80%);
+      position: absolute;
+      bottom: -4rem;
+      right: -.5rem;
+    }
+
+    @include breakpoint(small only){
+      margin-left: 0;
+    }
+  }
+}
+
+.section-about-blue {
+  background-color: $darkblue;
+  height: $section;
+  color: $white;
+  font-family: $bodyfont;
   padding: $largepadding;
 }
 
+.section-about-blue h1 {
+  font-size: $secheadsize;
+  font-family: $bodyfont;
+  padding-bottom: $mediumpadding;
+  margin-bottom: 0px;
+}
 
+.section-about-blue p {
+  font-size: $bodysize;
+  margin-bottom: 0px;
+  padding-top: $mediumpadding;
+}
 
-
-
-
-.whitesection {
+.section-about-white {
   background-color: $white;
+  height: $section;
+  color: $darkblue;
+  font-family: $bodyfont;
+  padding: $largepadding;
+}
+
+.section-about-white h1 {
+  font-size: $secheadsize;
+  font-family: $bodyfont;
+  padding-bottom: $mediumpadding;
+  margin-bottom: 0px;
+}
+
+.section-about-white p {
+  font-size: $bodysize;
+  margin-bottom: 0px;
+  padding-top: $mediumpadding;
+}
+
+.section-about-column-small {
+  display: inline-block;
+  height: 100%;
+  width: 20%;
+  vertical-align: top;
+}
+
+.section-about-column-large {
+  display: inline-block;
+  padding-left: $largepadding;
+  height: 100%;
+  width: 100%;
+  max-width: 79%;
+}
+
+.about-photo {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: text-top;
 }
 
 
-.bluesection {}
+
+.footer {
+  background-color: $darkblue;
+  width: 100%;
+  max-width: 1300px;
+  font-family: $bodyfont;
+  font-size: $bodysize;
+  color: $white;
+  padding-top: $smallpadding;
+  bottom: 0; 
+  text-align: center;
+}
+
+.footer-main {
+  display: inline-block;
+} 
+
+.footer-social {
+  float: right;
+  }
+
+.footer-social p {
+  display: inline-block;
+  bottom: 0;
+  padding-right: $smallpadding;
+}
+
+.footer i {
+  padding-right: $smallpadding;
+}
+
 /*# sourceMappingURL=test.css.map */
