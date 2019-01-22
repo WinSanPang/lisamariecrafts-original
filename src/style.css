@@ -7343,21 +7343,36 @@ body {
   width: 100%;
 }
 
+h1, h4, p, a, li {
+  font-family: "Heebo";
+}
+
+h1 {
+  font-size: 45px;
+  padding: 20px;
+}
+
+p, li {
+  font-size: 13px;
+}
+
 .section-container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1800px;
   margin: 0px auto;
   padding: 30px;
   height: 100%;
 }
 
-a {
-  color: white;
+.links {
+  color: #59c8f1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-a:hover {
-  color: white;
-  text-shadow: 0.5px 0.5px black;
+.links:hover {
+  color: #59c8f1;
+  font-size: 120%;
 }
 
 .navbar {
@@ -7370,21 +7385,22 @@ a:hover {
   height: 65px;
 }
 
-.links {
+.navlinks {
   word-spacing: 30px;
-  color: #0054a6;
-  font-family: "Heebo";
+  color: #59c8f1;
   float: right;
   padding: 20px;
 }
 
-.links a {
-  color: #0054a6;
+.navlinks a {
+  color: #59c8f1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-.links a:hover {
-  color: #0054a6;
-  text-shadow: 0.5px 0.5px black;
+.navlinks a:hover {
+  color: #59c8f1;
+  font-size: 120%;
 }
 
 .header {
@@ -7402,6 +7418,7 @@ a:hover {
   text-align: center;
   text-shadow: 2px 2px 2px grey;
   margin-bottom: 0;
+  padding: 0px;
 }
 
 .header h3 {
@@ -7416,7 +7433,7 @@ a:hover {
 
 .header-container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1800px;
   margin: 0px auto;
   padding-top: 130px;
 }
@@ -7425,34 +7442,19 @@ a:hover {
   width: 99%;
   position: absolute;
   z-index: -1;
-  background: #0054a6;
+  background: #59c8f1;
 }
 
 .section-features-blue {
   background-color: #0054a6;
-  height: 500px;
   color: white;
   text-align: center;
-  font-family: "Heebo";
   padding: 30px;
-}
-
-.section-features-blue h1, h4 {
-  font-family: "Heebo";
-}
-
-.section-features-blue h1 {
-  font-size: 45px;
-  padding: 20px;
 }
 
 .section-features-blue h4 {
   font-size: 25px;
   padding: 20px;
-}
-
-.section-features-blue p {
-  font-size: 13px;
 }
 
 .section-features-columns {
@@ -7472,28 +7474,17 @@ a:hover {
   padding-bottom: 30px;
   background-color: white;
   color: #0054a6;
-  font-family: "Heebo";
-}
-
-.section-features-white h1 {
-  font-size: 45px;
-  font-family: "Heebo";
-  padding: 20px;
-}
-
-.section-features-white p {
-  font-size: 13px;
 }
 
 .section-testimonal-columns {
   display: inline-block;
-  width: 500px;
+  vertical-align: top;
+  width: 550px;
+  padding: 0px 20px 0px 20px;
 }
 
 .featured-testimonials-section {
   background-color: white;
-  font-family: "Heebo";
-  font-size: 13px;
   padding: 30px;
   text-align: center;
   color: #0054a6;
@@ -7516,7 +7507,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2rem 1rem;
+  margin: 0rem 1rem;
 }
 
 .featured-testimonials-section .profile-pic {
@@ -7525,9 +7516,9 @@ a:hover {
 }
 
 .featured-testimonials-section .featured-testimonials-quotation {
-  margin-left: 3rem;
+  margin-left: 2rem;
   margin-bottom: 0rem;
-  padding: 1rem;
+  padding: 1.5rem;
   position: relative;
   color: #0054a6;
 }
@@ -7537,8 +7528,8 @@ a:hover {
   font-size: 5rem;
   color: #d6d6d6;
   position: absolute;
-  top: -2.5rem;
-  left: -1.5rem;
+  top: -1.0rem;
+  left: -1.0rem;
 }
 
 .featured-testimonials-section .featured-testimonials-quotation::after {
@@ -7550,50 +7541,38 @@ a:hover {
   right: -.5rem;
 }
 
-@media screen and (max-width: 39.99875em) {
-  .featured-testimonials-section .featured-testimonials-quotation {
-    margin-left: 0;
-  }
+.featured-testimonials-section .featured-testimonials-quotation-owner {
+  padding-bottom: 20px;
+  text-align: right;
+  margin: 0rem 2rem;
 }
 
 .section-about-blue {
   background-color: #0054a6;
-  height: 500px;
   color: white;
-  font-family: "Heebo";
   padding: 30px;
 }
 
 .section-about-blue h1 {
-  font-size: 45px;
-  font-family: "Heebo";
-  padding-bottom: 20px;
   margin-bottom: 0px;
 }
 
 .section-about-blue p {
-  font-size: 13px;
   margin-bottom: 0px;
   padding-top: 20px;
 }
 
 .section-about-white {
   background-color: white;
-  height: 500px;
   color: #0054a6;
-  font-family: "Heebo";
   padding: 30px;
 }
 
 .section-about-white h1 {
-  font-size: 45px;
-  font-family: "Heebo";
-  padding-bottom: 20px;
   margin-bottom: 0px;
 }
 
 .section-about-white p {
-  font-size: 13px;
   margin-bottom: 0px;
   padding-top: 20px;
 }
@@ -7619,11 +7598,86 @@ a:hover {
   vertical-align: text-top;
 }
 
+.section-gallery-blue {
+  background-color: #0054a6;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.section-gallery-white {
+  background-color: white;
+  color: #0054a6;
+  padding: 30px;
+  text-align: center;
+}
+
+.section-gallery-columns {
+  display: inline-block;
+  width: 240px;
+  height: 350px;
+  vertical-align: top;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  color: #0054a6;
+  font-size: 13px;
+}
+
+.section-gallery-columns p {
+  padding-top: 20px;
+}
+
+.section-gallery-photos {
+  width: 200px;
+  height: 200px;
+  position: center;
+}
+
+.section-gallery-photos img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-gallery-photos img:hover {
+  opacity: 0.1;
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+
+.section-gallery-photos:hover {
+  background-color: #59c8f1;
+  background-image: url(https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section-contact-white {
+  background-color: white;
+  color: #0054a6;
+  padding: 30px;
+  text-align: center;
+}
+
+.section-contact-white p {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+
+.section-contact-columns {
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+  padding: 30px 0px 30px 0px;
+  font-size: 13px;
+  text-align: left;
+}
+
 .footer {
   background-color: #0054a6;
   width: 100%;
-  max-width: 1300px;
-  font-family: "Heebo";
+  max-width: 1800px;
   font-size: 13px;
   color: white;
   padding-top: 10px;
@@ -7647,5 +7701,101 @@ a:hover {
 
 .footer i {
   padding-right: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    padding: 0px;
+    font-size: 30px;
+  }
+  .header h3 {
+    font-size: 50px;
+  }
+  .section-about-blue {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header h3 {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header h3 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h1 {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .header h1 {
+    font-size: 60px;
+  }
+  .header h3 {
+    line-height: 1;
+  }
+  .section-container {
+    padding: 0px;
+  }
+  .section-testimonal-columns {
+    width: 100%;
+  }
+  .section-features-columns {
+    padding: 0px;
+    margin: 0px;
+  }
+  .featured-testimonials-section .testimonial {
+    margin: 0rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 50px;
+  }
+  .header h3 {
+    font-size: 30px;
+    line-height: 1;
+  }
+  .navbar {
+    height: 50px;
+  }
+  .logo {
+    width: 90px;
+    height: 45px;
+  }
+  .navlinks {
+    padding: 10px;
+    font-size: 13px;
+  }
+  .section-features-blue {
+    padding: 20px;
+  }
+  .section-features-blue h1 {
+    font-size: 25px;
+    padding: 0px;
+  }
+  .section-features-blue h4 {
+    font-size: 15px;
+    padding: 0px;
+  }
+  .section-features-columns {
+    height: 150px;
+  }
+  .section-features-white h1 {
+    font-size: 25px;
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-device-width: 400px) {
+  .featured-testimonials-section .featured-testimonials-quotation {
+    margin-left: 0rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

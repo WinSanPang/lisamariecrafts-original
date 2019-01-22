@@ -15,6 +15,10 @@
   "homepage": "https://bitbucket.org/winsanpang/lisamariecrafts#readme",
   "dependencies": {
     "foundation-sites": "^6.5.0-rc.4",
-    "node-sass": "^4.9.4"
+    "node-sass": "^4.9.4",
+    "nunjucks": "^3.1.7"
+  },
+  "devDependencies": {
+    "gulp-nunjucks-render": "^2.2.2"
   }
 }

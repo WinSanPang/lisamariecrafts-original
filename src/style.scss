@@ -3,9 +3,10 @@
 @include foundation-everything;
 
 //Colour scheme//
-$darkblue: #0054a6;
-$white: white;
-$cyan: #59c8f1;
+$primarycolor: #0054a6;
+$secondarycolor: white;
+$thirdcolor: #59c8f1;
+$hovercolor: grey;
 
 //Text//
 $bodyfont: 'Heebo';
@@ -15,7 +16,14 @@ $subheadsize: 60px;
 $secheadsize: 45px;
 $secsubheadsize: 25px;
 $bodysize: 13px;
+$zoomsize: 120%;
 $shadowdefault: 2px 2px 2px grey;
+
+//Mobile Text//
+$mobheadsize: 50px;
+$mobsubheadsize: 30px;
+$mobsecheadsize: 25px;
+$mobsecsubheadsize: 15px;
 
 //Spacing//
 $smallpadding: 10px;
@@ -25,34 +33,45 @@ $extralargepadding: 50px;
 $nospacing: 0px;
 $navbarspacing: 30px;
 $banner: 300px;
-$section: 500px;
 
 body{
-  background-color:$darkblue;
+  background-color:$primarycolor;
   width: 100%;
 }
 
+h1, h4, p, a, li{
+  font-family: $bodyfont;
+}
+
+h1 {
+  font-size: $secheadsize;
+  padding: $mediumpadding;
+}
+
+p, li {
+  font-size: $bodysize;
+  }
+
 .section-container{
   width: 100%;
-  max-width: 1300px;
+  max-width: 1800px;
   margin: 0px auto;
   padding: $largepadding;
   height: 100%;
 }
 
-a {
-  color: $white;
+.links {
+  color: $thirdcolor;
+  transition: all .2s ease-in-out;
 }
 
-a:hover {
-  color: $white;
-  text-shadow: 0.5px 0.5px black;
+.links:hover {
+  color: $thirdcolor;
+  font-size: $zoomsize;
 }
-
-//maybe not text-shadow, perhaps try a glow effect//
 
 .navbar {
-  background-color:$white;
+  background-color:$secondarycolor;
   height: 70px;
 }
 
@@ -61,23 +80,22 @@ a:hover {
   height: 65px;
 }
 
-.links {
+.navlinks {
   word-spacing: $navbarspacing;
-  color: $darkblue;
-  font-family: $bodyfont;
+  color: $thirdcolor;
   float: right;
   padding: $mediumpadding;
 }
 
-.links a {
-  color: $darkblue;
+.navlinks a {
+  color: $thirdcolor;
+  transition: all .2s ease-in-out;
 }
-//Not sure if I have to float this to the right//
 
-.links a:hover{
-  color: $darkblue;
-  text-shadow: 0.5px 0.5px black;
-}
+.navlinks a:hover{
+  color: $thirdcolor;
+  font-size: $zoomsize;
+  }
 
 .header {
   height: $banner;  
@@ -89,17 +107,18 @@ a:hover {
 
 .header h1 {
   font-size: $headsize;
-  color: $white;
+  color: $secondarycolor;
   font-family: $headfont;
   text-align: center;
   text-shadow: $shadowdefault;
   margin-bottom: 0;
+  padding: 0px;
   }
 
   
 .header h3 {
   font-size: $subheadsize;
-  color: $darkblue;
+  color: $primarycolor;
   font-family: $headfont;
   text-shadow: $shadowdefault;
   text-align: center;
@@ -109,7 +128,7 @@ a:hover {
 
 .header-container { 
   width: 100%;
-  max-width: 1300px;
+  max-width: 1800px;
   margin: 0px auto;
   padding-top: 130px;
 }
@@ -118,34 +137,19 @@ a:hover {
   width: 99%;
   position: absolute;
   z-index: -1;
-  background: $darkblue; //fallback//
+  background: $thirdcolor; //fallback//
 }
 
 .section-features-blue {
-  background-color: $darkblue;
-  height: $section;
-  color: $white;
+  background-color: $primarycolor;
+  color: $secondarycolor;
   text-align: center;
-  font-family: $bodyfont;
   padding: $largepadding;
-}
-
-.section-features-blue h1, h4 {
-  font-family: $bodyfont;
-}
-
-.section-features-blue h1 {
-  font-size: $secheadsize;
-  padding: $mediumpadding;
 }
 
 .section-features-blue h4 {
     font-size: $secsubheadsize;
     padding: $mediumpadding;
-}
-
-.section-features-blue p {
-  font-size: $bodysize;
 }
 
 .section-features-columns {
@@ -163,42 +167,31 @@ a:hover {
 
 .section-features-white {
   padding-bottom: $largepadding;
-  background-color: $white;
-  color: $darkblue;
-  font-family: $bodyfont;
-}
-
-.section-features-white h1 {
-  font-size: $secheadsize;
-  font-family: $bodyfont;
-  padding: $mediumpadding;
-}
-
-.section-features-white p {
-  font-size: $bodysize;
+  background-color: $secondarycolor;
+  color: $primarycolor;
 }
 
 .section-testimonal-columns {
   display: inline-block;
-  width: 500px;
+  vertical-align: top;
+  width: 550px;
+  padding: 0px $mediumpadding 0px $mediumpadding;
 }
 
 .featured-testimonials-section {
-  background-color: $white;
-  font-family: $bodyfont;
-  font-size: $bodysize;
+  background-color: $secondarycolor;
   padding: $largepadding;
   text-align: center;
-  color: $darkblue;
+  color: $primarycolor;
 
   .featured-testimonials-container {
     .orbit-previous {
-      color: $darkblue;
+      color: $primarycolor;
       left: -1rem;
     }
 
     .orbit-next {
-      color: $darkblue;
+      color: $primarycolor;
       right: -1rem;
     }
 }
@@ -206,7 +199,7 @@ a:hover {
   .testimonial {
     display: flex;
     align-items: center;
-    margin: 2rem 1rem;
+    margin: 0rem 1rem;
   }
 
   .profile-pic {
@@ -215,19 +208,19 @@ a:hover {
   }
 
   .featured-testimonials-quotation {
-    margin-left: 3rem;
+    margin-left: 2rem;
     margin-bottom: 0rem;
-    padding: 1rem;
+    padding: 1.5rem;
     position: relative;
-    color: $darkblue;
+    color: $primarycolor;
 
     &::before {
       content: "“";
       font-size: 5rem;
       color: lighten($black, 80%);
       position: absolute;
-      top: -2.5rem;
-      left: -1.5rem;
+      top: -1.0rem;
+      left: -1.0rem;
     }
 
     &::after {
@@ -238,51 +231,41 @@ a:hover {
       bottom: -4rem;
       right: -.5rem;
     }
-
-    @include breakpoint(small only){
-      margin-left: 0;
-    }
   }
+
+  .featured-testimonials-quotation-owner {
+    padding-bottom: $mediumpadding;
+    text-align: right;
+    margin: 0rem 2rem;
+    }
 }
 
 .section-about-blue {
-  background-color: $darkblue;
-  height: $section;
-  color: $white;
-  font-family: $bodyfont;
+  background-color: $primarycolor;
+  color: $secondarycolor;
   padding: $largepadding;
 }
 
 .section-about-blue h1 {
-  font-size: $secheadsize;
-  font-family: $bodyfont;
-  padding-bottom: $mediumpadding;
   margin-bottom: 0px;
 }
 
 .section-about-blue p {
-  font-size: $bodysize;
   margin-bottom: 0px;
   padding-top: $mediumpadding;
 }
 
 .section-about-white {
-  background-color: $white;
-  height: $section;
-  color: $darkblue;
-  font-family: $bodyfont;
+  background-color: $secondarycolor;
+  color: $primarycolor;
   padding: $largepadding;
 }
 
 .section-about-white h1 {
-  font-size: $secheadsize;
-  font-family: $bodyfont;
-  padding-bottom: $mediumpadding;
   margin-bottom: 0px;
 }
 
 .section-about-white p {
-  font-size: $bodysize;
   margin-bottom: 0px;
   padding-top: $mediumpadding;
 }
@@ -308,15 +291,85 @@ a:hover {
   vertical-align: text-top;
 }
 
+.section-gallery-blue {
+  background-color: $primarycolor;
+  color: $secondarycolor;
+  text-align: center;
+  padding: $largepadding;
+}
 
+.section-gallery-white {
+  background-color: $secondarycolor;
+  color: $primarycolor;
+  padding: $largepadding;
+  text-align: center;
+}
+
+.section-gallery-columns {
+  display: inline-block;
+  width: 240px;
+  height: 350px;
+  vertical-align: top;
+  padding: $mediumpadding;
+  margin: 10px;
+  background-color: $secondarycolor;
+  color: $primarycolor;
+  font-size: $bodysize;
+}
+
+.section-gallery-columns p {
+ padding-top: $mediumpadding;
+}
+
+.section-gallery-photos {
+  width: 200px;
+  height: 200px;
+  position: center;
+}
+
+.section-gallery-photos img{
+  object-fit: cover;
+}
+.section-gallery-photos img:hover {
+  opacity: 0.1;
+  transition: all .8s ease-in-out;
+}
+
+.section-gallery-photos:hover {
+ background-color: $thirdcolor;
+ background-image: url(https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png);
+ background-size: 60%;
+ background-repeat: no-repeat;
+ background-position: center;
+ }
+
+ .section-contact-white {
+  background-color: $secondarycolor;
+  color: $primarycolor;
+  padding: $largepadding;
+  text-align: center;
+}
+
+.section-contact-white p {
+  font-size: $bodysize;
+  margin-bottom: 0px;
+}
+
+  .section-contact-columns {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    padding: $largepadding 0px $largepadding 0px;
+    font-size: $bodysize;
+    text-align: left;
+  }
 
 .footer {
-  background-color: $darkblue;
+  background-color: $primarycolor;
   width: 100%;
-  max-width: 1300px;
-  font-family: $bodyfont;
+  max-width: 1800px;
   font-size: $bodysize;
-  color: $white;
+  color: $secondarycolor;
   padding-top: $smallpadding;
   bottom: 0; 
   text-align: center;
@@ -340,4 +393,130 @@ a:hover {
   padding-right: $smallpadding;
 }
 
+//Breakpoints
+
+@media only screen and (max-width: 1000px) {
+
+  h1 {
+    padding: 0px;
+    font-size: $mobsubheadsize;
+  }
+
+  .header h3 {
+    font-size: $mobheadsize;
+  }
+
+  .section-about-blue {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  
+  .header h3 {
+    font-size: $secheadsize;
+  }
+
+  //.about-photo {
+  //  display:none;
+  //}
+}
+
+@media only screen and (max-width: 700px) {
+
+  .header h3 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  
+  h1 {
+    font-size: $mobsecheadsize;
+    padding: $smallpadding;
+  }
+
+  .header h1 {
+    font-size: $subheadsize;
+  }
+
+  .header h3 {
+    line-height: 1;
+  }
+
+  .section-container {
+    padding: 0px;
+  }
+
+  .section-testimonal-columns {
+    width: 100%;
+  }
+
+  .section-features-columns {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .featured-testimonials-section .testimonial {
+    margin: 0rem;
+  }
+
+}
+
+//Mobile
+@media only screen and (max-width: 480px) {
+
+  .header h1 {
+    font-size: $mobheadsize;
+  }
+
+  .header h3 {
+    font-size: $mobsubheadsize;
+    line-height: 1;
+  }
+
+  .navbar {
+    height: 50px;
+  }
+  
+  .logo {
+    width: 90px;
+    height: 45px;
+  }
+
+  .navlinks {
+    padding: $smallpadding;
+    font-size: $bodysize;
+    }
+
+  .section-features-blue {
+    padding: $mediumpadding;
+  }
+
+  .section-features-blue h1 {
+    font-size: $mobsecheadsize;
+    padding: 0px;
+  }
+
+  .section-features-blue h4 {
+    font-size: $mobsecsubheadsize;
+    padding: 0px;
+  }
+
+  .section-features-columns {
+    height: 150px;
+  }
+
+  .section-features-white h1 {
+    font-size: $mobsecheadsize;
+    padding: 0px;
+  }
+
+}
+
+@media only screen and (max-device-width: 400px) {
+  .featured-testimonials-section .featured-testimonials-quotation {
+    margin-left: 0rem;
+  }
+}
 /*# sourceMappingURL=test.css.map */
