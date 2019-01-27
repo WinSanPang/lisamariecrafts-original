@@ -1,34 +1,13 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  </head>
+{% extends "layout.njk" %}
 
-  <body>
-
+{% block content %}
 <title>Lisa Marie Crafts</title>
 
-  <section class="navbar">
-      <a href="home.html"> <img class="logo" src="pictures/Logo.png"></a>
-      <nav class="navlinks">
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-  </section>
+{% include "partials/navbar.njk" %}
 
-    <section class="header"> 
-      <div class="header-container">
-          <h1>Lisa Marie Crafts</h1>
-
+{% include "partials/header1.njk" %}
           <h3>For lovingly handmade personal gifts</h3>
-        </div>
-    </section>
+{% include "partials/header2.njk" %}
 
    <section class="section-features-blue">
      <div class="section-container">
@@ -92,13 +71,5 @@
       </div> 
     </section>
 
-   <footer class="footer">
-        <p class="footer-main">Lisa Marie Crafts 2018</p>
-      <nav class="footer-social">
-        <p>Follow us</p>
-        <a class="links" href="https://www.instagram.com/lisamariecrafts/" target="_blank"> <i class="fab fa-instagram"></i></a>
-        <a class="links" href="https://www.facebook.com/lisa.woodbridge.50" target="_blank"> <i class="fab fa-facebook-square"></i></a>
-      </nav>
-   </footer> 
-
-  </body>
+{% include "partials/footer.njk" %}
+{% endblock %}
